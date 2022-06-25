@@ -1,0 +1,35 @@
+body{
+    margin:0%;
+    padding: 4em;
+    background-image: url(img/istockphoto-470441170-612x612.jpg)
+        
+}
+nav{
+    background-color: rgb(247, 171, 7);
+    padding-bottom: 1em;
+    margin: 0% ;
+    display: flex;
+    
+}
+nav ul{
+   max-width: 1200px;
+    display: inline-block;
+    white-space:nowrap
+}
+nav li{
+    display: inline-block;
+    width: 25%;
+    font-size: 26px;
+    font-family: arial;
+    font-weight: bolder;
+}
+nav li a{
+    padding: 20%;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+.grid-container{
+    display: grid;
+}
