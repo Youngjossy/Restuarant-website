@@ -1,35 +1,233 @@
 body{
     margin:0%;
-    padding: 4em;
-    background-image: url(img/istockphoto-470441170-612x612.jpg)
-        
+    padding: 3em;
+    background-image: url(.img/istockphoto-470441170-612x612.jpg), linear-gradient(110deg, rgb(249, 61, 102), rgb(109, 71, 217));
+    background-attachment: fixed;
 }
 nav{
-    background-color: rgb(247, 171, 7);
-    padding-bottom: 1em;
-    margin: 0% ;
+    background: rgb(245, 180, 39);
+    padding: 7px;
+    margin: 0%;
+}
+.main-nav{
+   display: grid;
+   grid-template-columns: 100px 100px 100px 100px 100px;
+   /* grid-gap: 20%; */
+   list-style: none;
+   padding: 0;
+   justify-content: space-around;
+   cursor: pointer;
+
+    
+}
+nav li {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav li a {
+    text-decoration: none;
+    color: black;
+}
+nav :hover{
+    color: rgb(46, 33, 1);
+}
+
+nav li :hover{
+    background: rgb(68, 50, 1);
+    
+}
+
+.top{
     display: flex;
     
 }
-nav ul{
-   max-width: 1200px;
-    display: inline-block;
-    white-space:nowrap
+.hero{
+    flex:2;
+    background-image: url(img/taco.jpg);
+    padding: 7%;
+    margin-top: 40px;
+    margin-right: 40px;
+    padding-bottom: 20%;
 }
-nav li{
+.second{
+    flex:1;
+}
+
+.up{
+    background-color: rgb(247, 191, 8);
+    text-align: center;
+    color: black;
+    padding: 25%;
+    margin-top: 40px;
+    font-size: 19px;
+}
+
+.price{
+    font-style: italic;
+    font-size: larger;
+    font-weight: bold;
+    box-sizing: inherit;
+}
+.down{
+    background-color: rgb(247, 191, 8);
+    text-align: center;
+    color: black;
+    padding: 25%;
+    margin-top: 20px;
+    font-size: 19px;
+}
+
+.topo{
+    padding: 5px;
     display: inline-block;
-    width: 25%;
-    font-size: 26px;
-    font-family: arial;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    background: rgb(247, 191, 8) 
+}
+.topa{
+    padding: 5px;
+    display: inline-block;
+    margin-left: 20px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    background-color: rgb(247, 191, 8);
+}
+
+.features{
+    display: flex;
+    margin-top: 30px;
+}
+
+.feature{
+    background-color: white;
+    text-align: center;
+    font-weight: bolder;
+    font-size: 20px;
+    flex:1;
+    margin-right: 20px;
+}
+.icon{
+    font-size: 30px;
     font-weight: bolder;
 }
-nav li a{
-    padding: 20%;
+.featurea{
+    background-color: white;
     text-align: center;
-    text-decoration: none;
-    color: black;
-    cursor: pointer;
+    font-weight: bolder;
+    font-size: 20px;
+    flex:1;
 }
-.grid-container{
+.about{
+    display: flex;
+    background-color: white;
+    margin-top: 30px;
+    padding: 70px;
+    align-items: center;
+
+}
+.h2{
+    font-size: larger;
+    font-weight: bolder;
+    font-size: 20px;
+}
+.abouta{
+    font-size: 20px;
+    font-weight: bold;
+}
+    
+
+.abouts{
+    background-color: rgb(241, 169, 13);
+    text-align: center;
+    padding: 13px;
+    display: inline-block;
+}
+
+.gallery{
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: rgb(24, 23, 18);
+}
+
+.gallery::before{
+    display: block;
+    content: '';
+    height: 10px;
+    background: linear-gradient(to var(--direction, left), var(-- yellow), transparent);
+}
+
+.gallery::after{
+    --direction: right;
+}
+.photos{
     display: grid;
+    grid-template-columns: repeat(4, 300px);
+    grid-row-gap: 0%;
+    grid-gap: 17px;
+    justify-content: space-between
+    
+    
 }
+.photos img{
+    width: 100%;
+}
+
+/* img{
+    max-width: 100%;
+} */
+
+/* Media Queries */
+
+@media screen and (max-width: 940px){
+    .main-nav {
+        display: block;
+        text-align: center;
+        background-color: blanchedalmond;
+    }
+}
+
+@media screen and (max-width: 750px){
+    .top{
+        display: block;
+    }
+
+    .hero{
+        display: block;
+        padding-left: 20%;
+        padding-bottom: 40%;
+        width: 73%;
+    }
+
+.hero img{
+    width: 100%;
+}
+
+    .second{
+        display: grid;
+        grid-template-columns: 1fr;
+        padding: 0%;
+        font-size: 10px;
+    }
+    .features{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 5%;
+    }
+
+    .about{
+        display: grid;
+        grid-template-columns: 1fr;
+        margin-top: 5%;
+    }
+    .photos{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .photos img {
+        width: 40%;
+    }
